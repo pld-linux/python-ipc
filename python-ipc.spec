@@ -1,5 +1,5 @@
 
-%define         module	ipc
+%define		module	ipc
 
 Summary:	Python module implementing inter-process communication
 Summary(pl):	Modu³ Pythona implementuj±cy komunikacjê miêdzyprocesow±
