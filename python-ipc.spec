@@ -13,17 +13,17 @@ Source0:	http://www.heiho.net/python-ipc/python-ipc.tar.gz
 # Source0-md5:	af8a8e6b69dc8cd9240bafb1824f5f34
 Patch0:		%{name}-pld.patch
 URL:		http://www.heiho.net/python-ipc/
-%pyrequires_eq	python-modules
-BuildRequires:	swig
 BuildRequires:	python-devel >= 2.3
 BuildRequires:	rpm-pythonprov
+BuildRequires:	swig
+%pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Python module implementing inter-process communication
+Python module implementing inter-process communication.
 
 %description -l pl
-Modu³ pythona implementuj±cy komunikacjê miêdzyprocesow±
+Modu³ pythona implementuj±cy komunikacjê miêdzyprocesow±.
 
 %prep
 %setup -q -n %{name}
