@@ -1,9 +1,9 @@
 %include	/usr/lib/rpm/macros.python
 
-%define         module ipc
+%define         module	ipc
 
 Summary:	Python module implementing inter-process communication
-Summary(pl):	Modu³ pythona implementuj±cy komunikacjê miêdzyprocesow±
+Summary(pl):	Modu³ Pythona implementuj±cy komunikacjê miêdzyprocesow±
 Name:		python-%{module}
 Version:	0.0.1
 Release:	1
@@ -23,7 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Python module implementing inter-process communication.
 
 %description -l pl
-Modu³ pythona implementuj±cy komunikacjê miêdzyprocesow±.
+Modu³ Pythona implementuj±cy komunikacjê miêdzyprocesow±.
 
 %prep
 %setup -q -n %{name}
