@@ -1,0 +1,22 @@
+diff -uNr python-ipc-org/Makefile python-ipc/Makefile
+--- python-ipc-org/Makefile	Mon Aug  4 10:20:46 2003
++++ python-ipc/Makefile	Tue Oct 21 20:16:38 2003
+@@ -11,14 +11,14 @@
+ CFLAGSSO = $(COPT) -shared
+ 
+ SWIG=swig
+-PYTHON_INCLUDE=/usr/include/python2.2
++PYTHON_INCLUDE=/usr/include/python2.3
+ 
+ OBJS=ipc_wrap.o shmcpy.o mkmsgbuf.o
+ 
+-all: ipc.so
++all: _ipc.so
+ 
+-ipc.so: $(OBJS)
+-	$(CC) $(CFLAGSSO) $(OBJS) -o ipc.so
++_ipc.so: $(OBJS)
++	$(CC) $(CFLAGSSO) $(OBJS) -o _ipc.so
+ 
+ ipc_wrap.o: ipc_wrap.c
+ 	$(CC) $(CFLAGSWRAP) -c ipc_wrap.c -Dbool=char -I. -I$(PYTHON_INCLUDE)
