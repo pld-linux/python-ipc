@@ -12,7 +12,7 @@ Source0:	http://www.heiho.net/python-ipc/python-ipc.tar.gz
 # Source0-md5:	af8a8e6b69dc8cd9240bafb1824f5f34
 Patch0:		%{name}-pld.patch
 URL:		http://www.heiho.net/python-ipc/
-BuildRequires:	python-devel >= 2.3
+BuildRequires:	python-devel >= 1:2.3
 BuildRequires:	rpm-pythonprov
 BuildRequires:	swig
 %pyrequires_eq	python-modules
