@@ -31,7 +31,7 @@ Modu³ Pythona implementuj±cy komunikacjê miêdzyprocesow±.
 
 %build
 CFLAGS="%{rpmcflags}"
-export CLFAGS
+export CFLAGS
 
 %{__make}
 python -c "import compiler;compiler.compileFile('ipc.py')"
