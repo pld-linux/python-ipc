@@ -5,7 +5,7 @@ Summary:	Python module implementing inter-process communication
 Summary(pl):	Modu³ Pythona implementuj±cy komunikacjê miêdzyprocesow±
 Name:		python-%{module}
 Version:	0.0.1
-Release:	1
+Release:	2
 License:	GNU
 Group:		Development/Languages/Python
 Source0:	http://www.heiho.net/python-ipc/python-ipc.tar.gz
@@ -28,16 +28,18 @@ Modu³ Pythona implementuj±cy komunikacjê miêdzyprocesow±.
 %patch0 -p1
 
 %build
-CFLAGS="%{rpmcflags}"
-export CFLAGS
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}" \
+	PYTHON_INCLUDE="%{py_incdir}"
 
-%{__make}
 python -c "import compiler;compiler.compileFile('ipc.py')"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{py_sitedir}
-install ipc.pyc _ipc.so $RPM_BUILD_ROOT%{py_sitedir}
+
+install ipc.py[co] _ipc.so $RPM_BUILD_ROOT%{py_sitedir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -45,5 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%{py_sitedir}/%{module}.pyc
+%{py_sitedir}/%{module}.py[co]
 %attr(755,root,root) %{py_sitedir}/_%{module}.so
