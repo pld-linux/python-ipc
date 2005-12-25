@@ -5,15 +5,15 @@ Summary:	Python module implementing inter-process communication
 Summary(pl):	Modu³ Pythona implementuj±cy komunikacjê miêdzyprocesow±
 Name:		python-%{module}
 Version:	0.0.1
-Release:	2
-License:	GNU
+Release:	3
+License:	free
 Group:		Development/Languages/Python
 Source0:	http://www.heiho.net/python-ipc/python-ipc.tar.gz
 # Source0-md5:	af8a8e6b69dc8cd9240bafb1824f5f34
 Patch0:		%{name}-pld.patch
 URL:		http://www.heiho.net/python-ipc/
 BuildRequires:	python-devel >= 1:2.3
-BuildRequires:	swig
+BuildRequires:	swig-python
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,7 +30,9 @@ Modu³ Pythona implementuj±cy komunikacjê miêdzyprocesow±.
 %build
 %{__make} \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags}" \
+	CFLAGS="%{rpmcflags} -fPIC" \
+	CFLAGSSO="-shared %{rpmldflags}" \
+	CFLAGSWRAP="%{rpmcflags} -fPIC" \
 	PYTHON_INCLUDE="%{py_incdir}"
 
 python -c "import compiler;compiler.compileFile('ipc.py')"
