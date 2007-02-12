@@ -2,7 +2,7 @@
 %define		module	ipc
 
 Summary:	Python module implementing inter-process communication
-Summary(pl):	Modu³ Pythona implementuj±cy komunikacjê miêdzyprocesow±
+Summary(pl.UTF-8):   ModuÅ‚ Pythona implementujÄ…cy komunikacjÄ™ miÄ™dzyprocesowÄ…
 Name:		python-%{module}
 Version:	0.0.1
 Release:	3
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Python module implementing inter-process communication.
 
-%description -l pl
-Modu³ Pythona implementuj±cy komunikacjê miêdzyprocesow±.
+%description -l pl.UTF-8
+ModuÅ‚ Pythona implementujÄ…cy komunikacjÄ™ miÄ™dzyprocesowÄ….
 
 %prep
 %setup -q -n %{name}
