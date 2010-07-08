@@ -5,7 +5,7 @@ Summary:	Python module implementing inter-process communication
 Summary(pl.UTF-8):	Moduł Pythona implementujący komunikację międzyprocesową
 Name:		python-%{module}
 Version:	0.0.1
-Release:	4
+Release:	5
 License:	free
 Group:		Development/Languages/Python
 Source0:	http://www.heiho.net/python-ipc/python-ipc.tar.gz
