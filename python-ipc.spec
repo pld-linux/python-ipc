@@ -13,6 +13,8 @@ Source0:	http://www.heiho.net/python-ipc/python-ipc.tar.gz
 Patch0:		%{name}-pld.patch
 URL:		http://www.heiho.net/python-ipc/
 BuildRequires:	python-devel >= 1:2.3
+BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
 BuildRequires:	swig-python
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
